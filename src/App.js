@@ -1,12 +1,27 @@
+import { Routes, Route} from "react-router-dom";
+import Dashboard from "./layouts/dashboard";
+import { ThemeProvider } from "@emotion/react";
+import { createTheme } from '@mui/material/styles';
 
-function App() {
+const App = () => {
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#1e293b',
+        light: '#ffffff',
+        dark: '#0f172a',
+      },
+    },
+  })
+
   return (
-    <div className="App">
-      QuickCoderz Attendance
-      <h1>title</h1>
-    </div>
-
-  );
+    <ThemeProvider theme={theme}>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </ThemeProvider>
+  )
 }
 
 export default App;
