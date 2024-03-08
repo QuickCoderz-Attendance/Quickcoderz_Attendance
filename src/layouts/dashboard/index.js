@@ -1,8 +1,12 @@
-import { Typography } from "@mui/material"
+import { Box } from "@mui/material"
+import Sidebar from "./componenets/sidebar"
 
-const Dashboard = () =>{
+const Dashboard = () => {
+
     return(
-        <Typography variant="h3">QuickCoderz Attendance Dashboard</Typography>
+      <Box className="page-wrapper">
+        <Sidebar />
+      </Box>
     )
 }
 

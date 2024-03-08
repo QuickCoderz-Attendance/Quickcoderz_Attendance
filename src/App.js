@@ -1,24 +1,21 @@
+import { useState } from "react";
 import { Routes, Route} from "react-router-dom";
 import Dashboard from "./layouts/dashboard";
 import { ThemeProvider } from "@emotion/react";
-import { createTheme } from '@mui/material/styles';
+import { CssBaseline } from "@mui/material";
+
+import lightTheme from "./assets/theme/index";
+import darkTheme from "./assets/theme-dark/index";
 
 const App = () => {
 
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#1e293b',
-        light: '#ffffff',
-        dark: '#0f172a',
-      },
-    },
-  })
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <CssBaseline />
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard change={() => setDarkMode(!darkMode)} />} />
       </Routes>
     </ThemeProvider>
   )

@@ -1,21 +1,21 @@
 const colors = {
 
-    mode: "light",
+    mode: "dark",
 
     text: {
-        primary: "#3d434a",
+        primary: "#ffffff",
         secondary: "#8D8D8D",
     },
 
     primary: {
-        main: '#145858',
+        main: '#3d434a',
         light: '#ffffff',
         dark: '#0f172a',
     },
 
     background: {
-        paper: '#145858',
-        default: '#E9EFEF'
+        paper: '#2A3650',
+        default: '#374462'
     }
 
 }
