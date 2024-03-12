@@ -15,7 +15,9 @@ import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import ChecklistRtlOutlinedIcon from '@mui/icons-material/ChecklistRtlOutlined';
 
-import Header from '../../global-components/header';
+import logo from "../../../assets/images/quickcoderz_logo.png";
+
+import Header from './header';
 
 
 const drawerWidth = 252;
@@ -35,17 +37,17 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
+  width: '80px',
   [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+    width: '80px',
   },
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: theme.spacing(0, 1),
+  justifyContent: 'flex-start',
+  padding: '0 20px',
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
@@ -54,6 +56,8 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
+  width: 'calc(100% - 80px)',
+  boxShadow: '0px 8px 30px 0px rgba(255, 255, 255, 0.1)',
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -65,6 +69,7 @@ const AppBar = styled(MuiAppBar, {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    backgroundImage: 'none',
   }),
 }));
 
@@ -110,8 +115,8 @@ const Sidebar = () => {
 
           {/* sidebar top logo row*/}
           <DrawerHeader>
-            <img src="/assets/images/quickcoderz_logo.png" alt="logo" />
-            <Typography variant="h5" sx={{color: '#fff'}}>QuickCoderz</Typography>
+            <img src={logo} alt="logo" />
+            <Typography variant="h5" sx={{color: '#fff', fontWeight: '500', fontSize: '19px', lineHeight: '21px', marginLeft: '6px'}}>QuickCoderz</Typography>
           </DrawerHeader>
           <Divider />
 
@@ -146,7 +151,7 @@ const Sidebar = () => {
         {/* sidebar end */}
 
         
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Box component="main" sx={{ flexGrow: 1, p: 3, minHeight: 'calc(100vh - 61px)'}}>
           <DrawerHeader />
           <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -176,9 +181,6 @@ const Sidebar = () => {
             posuere sollicitudin aliquam ultrices sagittis orci a.
           </Typography>
         </Box>
-
-
-        
 
       </Box>
     )

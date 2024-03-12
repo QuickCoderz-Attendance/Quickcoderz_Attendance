@@ -8,14 +8,24 @@ const colors = {
     },
 
     primary: {
-        main: '#3d434a',
+        main: '#F7B318',
         light: '#ffffff',
-        dark: '#0f172a',
+        dark: '#145858',
+    },
+
+    secondary: {
+        main: '#ffffff'
     },
 
     background: {
-        paper: '#2A3650',
-        default: '#374462'
+        paper: '#145858',
+        default: '#2B6868',
+        main: '#145858'
+    },
+
+    icon: {
+        main: '#ffffff',
+        bg: '#2F6B6B'
     }
 
 }

@@ -10,12 +10,22 @@ const colors = {
     primary: {
         main: '#145858',
         light: '#ffffff',
-        dark: '#0f172a',
+        dark: '#145858',
+    },
+
+    secondary: {
+        main: '#757575'
     },
 
     background: {
         paper: '#145858',
-        default: '#E9EFEF'
+        default: '#E9EFEF',
+        main: '#fff'
+    },
+
+    icon: {
+        main: '#3D434A',
+        bg: '#F4F7F9'
     }
 
 }
