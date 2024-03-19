@@ -1,0 +1,83 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Upcomings",
+            "projects_counts":"5",
+            "bg_color":"#E9EFEF",
+            "icon":{
+                    "src": 1,
+                    "bg_color": "#145858"
+                }
+        },
+        {
+            "id": 2,
+            "title": "Upcomings",
+            "projects_counts":"5",
+            "bg_color":"#FEF7E7",
+            "icon":{
+                    "src": 1,
+                    "bg_color": "#F7B318"
+                }
+        },
+        {
+            "id": 3,
+            "title": "Upcomings",
+            "projects_counts":"5",
+            "bg_color":"#FBF1EC",
+            "icon":{
+                    "src": "",
+                    "bg_color": "#D77748"
+                }
+        },
+        {
+            "id": 4,
+            "title": "Upcomings",
+            "projects_counts":"5",
+            "bg_color":"#F9EEEE",
+            "icon":{
+                    "src": 1,
+                    "bg_color": "#C95E5E"
+                }
+        }
+    ],
+    "tasklist":[
+        {
+            "id":1,
+            "title":" Sarah Smith",
+            "url":"",
+            "tasks_title":"Title",
+            "status":"Progress",
+            "role":"Manager",
+            "progress":{
+                "percentange":"40%",
+                "color":"red"
+            }
+        },
+        {
+            "id":2,
+            "title":" Sarah Smith",
+            "url":"",
+            "tasks_title":"Title",
+            "status":"Progress",
+            "role":"Manager",
+            "progress":{
+                "percentange":"40%",
+                "color":"red"
+            }
+        },
+        {
+            "id":3,
+            "title":" Sarah Smith",
+            "url":"",
+            "tasks_title":"Title",
+            "status":"Progress",
+            "role":"Manager",
+            "progress":{
+                "percentange":"40%",
+                "color":"red"
+            }
+        }
+
+    ]
+}
