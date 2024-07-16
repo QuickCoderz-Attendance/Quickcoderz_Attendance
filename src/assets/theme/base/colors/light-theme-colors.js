@@ -1,4 +1,4 @@
-const colors = {
+const LightThemeColors = {
 
     mode: "light",
 
@@ -42,9 +42,7 @@ const colors = {
         red: '#C95E5E'
     }
 
-    
-
 }
 
 
-export default colors
+export default LightThemeColors

@@ -11,6 +11,21 @@ const typography = {
         letterSpacing: '0.7px',
         marginBottom: '20px'
       },
+
+    h6: {
+      fontSize: '14px',
+      fontWeight: '500',
+      lineHeight: '1',
+      letterSpacing: '0.6px'
+    },
+
+    subtitle1: {
+      fontSize:'18px',
+      lineHeight:'20px',
+      fontWeight:'500',
+      letterSpacing:'0.7px',
+    },
+    
 }
 
 export default typography

@@ -1,33 +1,15 @@
-import * as React from 'react';
+import React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import axios from 'axios';
 import MailLockIcon from '@mui/icons-material/MailLock';
 
 
 export default function Notifications() {
 
-  const [projects, setProjects] = React.useState()
-  React.useEffect(() => {
-  axios.get("http://localhost:3000/projects")
-  .then((res) => {
-    setProjects(res.data)
-    console.log(res.data)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
-}, []);
-
   return (
-
-
-   
 
     <List>
         <Typography variant="h4">Notifications</Typography>

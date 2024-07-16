@@ -1,50 +1,54 @@
-const colors = {
+const DarkThemeColors = {
 
-    mode: "light",
+    mode: "dark",
 
     text: {
-        primary: "#3d434a",
+        primary: "#ffffff",
         secondary: "#8D8D8D",
     },
 
     primary: {
-        main: '#145858',
+        main: '#F7B318',
         light: '#ffffff',
         dark: '#145858',
     },
 
     secondary: {
-        main: '#757575'
+        main: '#ffffff'
     },
 
     background: {
         paper: '#145858',
-        default: '#E9EFEF',
-        main: '#fff'
+        default: '#2B6868',
+        main: '#145858'
     },
 
     icon: {
-        main: '#3D434A',
-        bg: '#F4F7F9'
+        main: '#ffffff',
+        bg: '#2F6B6B'
     },
 
     global_light_color: {
-        green: '#E9EFEF',
+        green: '#558686',
+        yellow: '#F7B318B2',
+        orange: '#D77748B2',
+        red: '#C95E5EB2'
+    },
+
+    global_dark_color: {
+        green: '#F4F7F9',
         yellow: '#FEF7E7',
         orange: '#FBF1EC',
         red: '#F9EEEE'
     },
 
-    global_dark_color: {
+    icon_color: {
         green: '#145858',
         yellow: '#F7B318',
         orange: '#D77748',
         red: '#C95E5E'
     }
 
-    
-
 }
 
-
-export default colors
+export default DarkThemeColors

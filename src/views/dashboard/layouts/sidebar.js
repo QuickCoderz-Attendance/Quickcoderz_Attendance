@@ -1,26 +1,19 @@
-import * as React from 'react';
+import React from 'react';
 import { styled} from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import {Box, List, Typography, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import ChecklistRtlOutlinedIcon from '@mui/icons-material/ChecklistRtlOutlined';
+import { FiUsers } from "react-icons/fi";
+import {Link} from 'react-router-dom';
 
 import logo from "../../../assets/images/quickcoderz_logo.png";
 
 import Header from './header';
-import EventsCalendarSidebar from '../../pages/similar-modules/home/eventsCalendar';
-import Home from '../../pages/admin/Home';
-
+import AllRoutes from '../../../routes/allRoutes';
 
 const drawerWidth = 252;
 
@@ -50,7 +43,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-start',
   padding: '0 20px',
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -117,15 +109,21 @@ const Sidebar = () => {
 
           {/* sidebar top logo row*/}
           <DrawerHeader>
-            <img src={logo} alt="logo" />
-            <Typography variant="h5" sx={{color: '#fff', fontWeight: '500', fontSize: '19px', lineHeight: '21px', marginLeft: '6px'}}>QuickCoderz</Typography>
+            <Link to="/" style={{display: 'flex', alignItems: 'center', textDecoration: 'none'}}>
+              <img src={logo} alt="logo" />
+              {
+                open ? 
+                <Typography variant="h5" sx={{color: '#fff', fontWeight: '500', fontSize: '19px', lineHeight: '21px', marginLeft: '6px'}}>QuickCoderz</Typography>
+                :null
+              }
+            </Link>
           </DrawerHeader>
           <Divider />
 
 
           {/* sidebar list items */}
           <List>
-            {['Dashboard', 'Project', 'Tasks', 'Attendance'].map((text, index) => (
+            {['Dashboard', 'Project', 'Tasks', 'Attendance', 'Employees'].map((text, index) => (
               <ListItem key={text} disablePadding sx={{ display: 'block' }}>
                 <ListItemButton
                   sx={{
@@ -142,7 +140,13 @@ const Sidebar = () => {
                       color: '#fff'
                     }}
                   >
-                    {index === 0 ? <HomeOutlinedIcon /> : index === 1 ? <AccountTreeOutlinedIcon /> : index === 2 ? <AssignmentTurnedInOutlinedIcon /> : <ChecklistRtlOutlinedIcon />}
+                    {
+                      index === 0 ? <HomeOutlinedIcon /> 
+                      : index === 1 ? <AccountTreeOutlinedIcon /> 
+                      : index === 2 ? <AssignmentTurnedInOutlinedIcon /> 
+                      : index === 3 ? <ChecklistRtlOutlinedIcon />
+                      : <FiUsers />
+                    }
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 , color: '#fff'}} />
                 </ListItemButton>
@@ -157,7 +161,7 @@ const Sidebar = () => {
           <DrawerHeader />
 
           {/* pages */}
-          <Home />
+          <AllRoutes />
 
         </Box>
 

@@ -16,10 +16,6 @@ import TableRow from '@mui/material/TableRow';
 import {makeStyles} from '@mui/styles';
 
 
-
-
-
-
 const CopyrightText = {
   fontSize: '14px',
   color: '#F7B318',
