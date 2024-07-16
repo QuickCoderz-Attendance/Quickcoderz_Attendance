@@ -63,7 +63,7 @@ const Validations = {
             message: "Phone Number cannot exceed more than 10 numbers"
         },
         pattern: {
-            value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
+            value: /^[+]?[0-9]{3}[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im,
             message: "Invalid phone number."
         }
     },
